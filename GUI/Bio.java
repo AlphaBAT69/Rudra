@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYDataset;
 
 public class Bio extends JFrame{
@@ -33,16 +34,16 @@ public class Bio extends JFrame{
 		pan.setLayout(new GridLayout(0,2));
 		pan.setBounds(10,10,850,600);
 		
-		ph=ChartFactory.createXYLineChart("pH Plot", "Time", "pH", null);
+		ph=ChartFactory.createXYLineChart("pH Plot", "Time", "pH", null,PlotOrientation.VERTICAL,true,true,false);
 		phPanel=new ChartPanel(ph);
 		
-		temp=ChartFactory.createXYLineChart("Temperature Plot", "Time", "Temperature", null);
+		temp=ChartFactory.createXYLineChart("Temperature Plot", "Time", "Temperature", null,PlotOrientation.VERTICAL,true,true,false);
 		tempPanel=new ChartPanel(temp);
 		
-		co2=ChartFactory.createXYLineChart("CO2 Plot", "Time", "CO2", null);
+		co2=ChartFactory.createXYLineChart("CO2 Plot", "Time", "CO2", null,PlotOrientation.VERTICAL,true,true,false);
 		co2Panel=new ChartPanel(co2);
 		
-		humidity=ChartFactory.createXYLineChart("Humidity Plot", "Time", "Humidity", null);
+		humidity=ChartFactory.createXYLineChart("Humidity Plot", "Time", "Humidity", null,PlotOrientation.VERTICAL,true,true,false);
 		humidityPanel=new ChartPanel(humidity);
 		
 		l1=new JLabel("Current pH Value:");
